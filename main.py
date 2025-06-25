@@ -3,13 +3,13 @@ import datetime
 import pytz
 
 tz_CL = pytz.timezone('America/Santiago')
-datetime_CL = datetime.now(tz_CL)
+datetime_CL = datetime.datetime.now(tz_CL)
 
 try:
     edad = int(input("ingresa la edad: "))
 except Exception as e:
     with open(f"error.log","a", encoding="utf-8") as log:
-        log.write(f"el error es {datetime_CL.strftime("%d/%m/%Y, %H:%M:%S")}, {e} \n")
+        log.write(f"el error es: {datetime_CL.strftime("%d/%m/%Y %H:%M:%S")}, {e} \n")
 
 
 
